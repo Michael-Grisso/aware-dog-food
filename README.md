@@ -1,2 +1,4 @@
-# aware-dog-food
-We'll do this later
+# H1 Allergy-Free Food Finder App for Dogs - Mod 3 Project
+
+
+
