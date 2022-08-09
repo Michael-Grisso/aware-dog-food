@@ -1,2 +1,3 @@
-# aware-dog-food
-We'll do this later
+# Mod 3 Project
+#### Allergy-free dog food finder
+
