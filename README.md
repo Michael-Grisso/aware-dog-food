@@ -1,11 +1,6 @@
 STILL WORKIN ON THIS README.MD FILE
 
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
-
 <!-- PROJECT LOGO -->
 
 
