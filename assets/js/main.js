@@ -216,3 +216,8 @@
 	 */
 	new PureCounter();
 })();
+
+
+function searchFood() {
+	
+}
