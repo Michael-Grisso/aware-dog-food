@@ -93,7 +93,7 @@
 			<div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
 				<h1>Aware Food</h1>
 				<h2>Find the safest food for your dog.</h2>
-				<input class="search-field" type="text" id="input" placeholder="Enter food allergy...">
+				<input class="search-field" type="text" id="inputForSearch" placeholder="Enter food allergy...">
 <!--Get the api connection to function after clicking Get Started-->
 				<input type="button" id="inputBtn" class="btn-get-started" value="Get Started" onclick="searchFood()">
 			</div>
@@ -118,19 +118,11 @@
 						<h3 class="section-title">Results</h3>
 					</div>
 
-					<div
-						class="row portfolio-container"
-						data-aos="fade-up"
-						data-aos-delay="200"
-					>
-						<div
-							class="col-lg-4 col-md-6 portfolio-item filter-app"
-						>
-							<img
-								src="assets/img/portfolio/portfolio-1.jpg"
-								class="img-fluid"
-								alt=""
-							/>
+					<div id="searchResultsArea" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+
+						<!-- <div id="searchResultUPCcodes" class="col-lg-4 col-md-6 portfolio-item filter-app">
+							<h3>UPC code search results</h3>
 						</div>
 
 						<div
@@ -211,7 +203,7 @@
 								class="img-fluid"
 								alt=""
 							/>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</section>
