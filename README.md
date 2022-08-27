@@ -45,9 +45,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ### Acknowledgments
 
-- [othneildrew](https://github.com/othneildrew/Best-README-Template)
+- [othneildrew Best README Template](https://github.com/othneildrew/Best-README-Template)
 - [adam-p Markdown Language Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [GitHub docs](https://docs.github.com/en)
-- []
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
