@@ -1,8 +1,6 @@
-STILL WORKIN ON THIS README.MD FILE
-
 <!-- PROJECT LOGO -->
 
-![](https://assets/img/home.jpg "Aware Dog Food Finder")
+![](assets/img/home.jpg "Aware Dog Food Finder")
 
 <!-- TABLE OF CONTENTS -->
 <details>
