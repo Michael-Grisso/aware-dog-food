@@ -16,13 +16,10 @@ STILL WORKIN ON THIS README.MD FILE
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -31,6 +28,8 @@ STILL WORKIN ON THIS README.MD FILE
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+
+![](https://assets/img/home.jpg "Aware Dog Food Finder")
 
 <!--this is just a quick snippet, but we can fine tune it later.-->
 
