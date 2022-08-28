@@ -260,3 +260,23 @@ function searchFood() {
 	})
 	.catch(err => console.error(err));
 }
+
+
+function dogFacts() {
+	let urlDog = "https://dog-api.kinduff.com/api/facts";
+	
+	// console.log(url);
+	fetch(urlDog)
+	.then(resp => {
+		console.log(resp)
+	})
+
+	//have not got to next promise
+	// .then(data =>{
+	// 	let dogFacts = data.dogFacts
+	// 	// console.log(dogFacts)
+		
+
+	// })
+	.catch(err => console.error(err));
+}
