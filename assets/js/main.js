@@ -225,7 +225,6 @@ function searchFood() {
 	
 
 	let url = `https://us.openpetfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=dog_food&json=true&tagtype_1=allergens&tag_contains_1=without&tag_1=${inputAllergen}`;
-	//tagtype_1=allergens&tag_contains_1=without&tag_1=${inputAllergen} extra bit of code that filters 
 	// console.log(url);
 	fetch(url)
 	.then(resp =>resp.json())
