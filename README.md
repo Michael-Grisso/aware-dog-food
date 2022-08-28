@@ -1,8 +1,6 @@
-STILL WORKIN ON THIS README.MD FILE
-
 <!-- PROJECT LOGO -->
 
-![](https://assets/img/home.jpg "Aware Dog Food Finder")
+![](assets/img/home.jpg "Aware Dog Food Finder")
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -24,13 +22,13 @@ STILL WORKIN ON THIS README.MD FILE
 
 <!--this is just a quick snippet, but we can fine tune it later.-->
 
-Aware is an easy-to-use single page web application. It is designed to search for an ingredient your dog cannot consume, find any options with the ingredient(s), then remove each one from the results.
+Aware is an easy-to-use single page web application. It is designed to enter "gluten", "fish", "celery", or "milk", and then remove each all dog food products with those ingredients from the results.
 
 ### Built With
 
-- [Bootstrap](https://bootstrapmade.com/regna-bootstrap-onepage-template)
-- [CSS](https://github.com/Michael-Grisso/aware-dog-food/tree/main/assets/css)
-- [HTML](https://github.com/Michael-Grisso/aware-dog-food/blob/main/index.html)
+- [![Bootstrap][bootstrap.com]][bootstrap-url]
+- ![CSS.com]
+- ![HTML.com]
 - [JavaScript](https://github.com/Michael-Grisso/aware-dog-food/tree/main/assets/js)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -53,3 +51,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 - []
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[bootstrap-url]: https://bootstrapmade.com/regna-bootstrap-onepage-templat
+[css.com]: https://img.shields.io/badge/CSS-FF0000?style=for-the-badge&logo=tailwind-css&logoColor=white
+[html.com]: https://img.shields.io/badge/HTML-302683?style=for-the-badge&logo=HTML%20Academy&logoColor=white

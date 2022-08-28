@@ -224,7 +224,7 @@ function searchFood() {
 	let searchResultArea = document.getElementById("searchResultsArea")
 	
 
-	let url = `https://us.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=dog_food&json=true&tagtype_1=allergens&tag_contains_1=without&tag_1=${inputAllergen}`;
+	let url = `https://us.openpetfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=dog_food&json=true&tagtype_1=allergens&tag_contains_1=without&tag_1=${inputAllergen}`;
 	// console.log(url);
 	fetch(url)
 	.then(resp =>resp.json())
