@@ -224,50 +224,38 @@ function searchFood() {
 	let searchResultArea = document.getElementById("searchResultsArea")
 	
 
-	let url = `https://us.openfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=dog_food&json=true&tagtype_1=allergens&tag_contains_1=without&tag_1=${inputAllergen}`;
+	let url = `https://us.openpetfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=dog_food&json=true&tagtype_1=allergens&tag_contains_1=without&tag_1=${inputAllergen}`;
+	//tagtype_1=allergens&tag_contains_1=without&tag_1=${inputAllergen} extra bit of code that filters 
 	// console.log(url);
 	fetch(url)
 	.then(resp =>resp.json())
 	.then(data =>{
-		let dataArr = Object.values(data)
-		let productArr = dataArr[4]
-		// console.log(productArr)
-
-
-		let upcArr = []
 		
-		for (let obj of productArr) {
-			let itemArr = Object.values(obj)
-			let upcCode = Number(itemArr[0])
-			upcArr.push(upcCode) 
+		 //console.log(data)
 
-			let UPCresultBox = document.createElement("div");
-			UPCresultBox.setAttribute("class", "col-lg-4 col-md-6 portfolio-item filter-app")
+		
+		for (let product of data.products) {
+			let productName = product.product_name
+			let productImage = product.image_url
+			let ingredientList = product.ingredients
+				console.log(ingredientList)		//	
+			
 
-			let resultUPC = document.createElement("h3")
-			resultUPC.innerText = upcCode
-			UPCresultBox.appendChild(resultUPC)
+			let resultBox = document.createElement("div");
+			resultBox.setAttribute("class", "col-lg-4 col-md-6 portfolio-item filter-app")
 
-			searchResultArea.appendChild(UPCresultBox)
+			let result = document.createElement("h4")
+			result.innerText = productName
+			resultBox.append(result)
+
+			let pic = document.createElement("img")
+			pic.setAttribute("src", productImage)
+			pic.setAttribute("class", "img-fluid")
+			resultBox.append(pic)
+
+			searchResultArea.appendChild(resultBox)
+
 		}
-		console.log(upcArr) //array of upc codes
-
-		//start of second API (might be better to just take an array of UPC codes out of first fetch the loop through them to make UPC to title&img conversion)
-			
-			// const options = {
-			// 	method: 'GET',
-			// 	headers: {
-			// 		'X-RapidAPI-Key': '7f172919e5msha559d899d95bfd6p1611e5jsn0a5c6dc03272',
-			// 		'X-RapidAPI-Host': 'barcodes1.p.rapidapi.com'
-			// 	}
-			// };
-			
-			// fetch(`https://barcodes1.p.rapidapi.com/?query=${upcCode}`, options)
-			// 	.then(response => response.json())
-			// 	.then(response => console.log(response))
-			// 	.catch(err => console.error(err));
-
-		//end of adding secnod API
 		
 	})
 	.catch(err => console.error(err));
