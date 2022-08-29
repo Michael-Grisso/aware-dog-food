@@ -490,7 +490,6 @@ h6 {
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: rgba(0, 0, 0, 1);
 	font-weight: 500;
-	opacity: 1; /* Firefox */
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -503,8 +502,9 @@ h6 {
 
 
 #hero .btn-get-started:hover {
-	background: #ffffff;
-	border: 2px solid #2dc997;
+	background: black;
+	color: white;
+	font-size: 18px;
 }
 
 /*--------------------------------------------------------------
