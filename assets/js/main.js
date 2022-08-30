@@ -262,20 +262,68 @@ function searchFood() {
 
 
 function dogFacts() {
-	let urlDog = "https://dog-api.kinduff.com/api/facts";
+
 	
-	// console.log(url);
-	fetch(urlDog)
-	.then(resp => {
-		console.log(resp)
+	
+
+	let urlDog = "https://dogfacts-api.herokuapp.com/api/v1/resources/dogs?number=5";
+	
+	fetch(urlDog, {
+		headers: {
+			"Accept": "application/json",
+			"content-type": "application/json",
+			"origin": "*",
+			"methods": "GET",
+			"preflightContinue": false,
+			"optionsSuccessStatus": 204
+		  }
 	})
 
-	//have not got to next promise
-	// .then(data =>{
-	// 	let dogFacts = data.dogFacts
-	// 	// console.log(dogFacts)
-		
+	.then(resp => resp.json())
 
-	// })
+	.then((data) => {
+		let dogFactArea = document.getElementById("dogFact");
+		let factList = document.createElement("ol")
+	
+		console.log(data) //data is array of fact objects
+		for (let obj of data) {
+			let randomFact = obj.fact 
+			
+			let factEl = document.createElement("li")
+			factEl.setAttribute("class", "dogFactListedFacts")
+			factEl.innerText = randomFact
+			factList.appendChild(factEl)
+		}
+		dogFactArea.appendChild(factList)
+	})
+
+
 	.catch(err => console.error(err));
 }
+
+
+
+// function dogPics() {
+
+// 	let pictureArea = document.getElementById("dogPicture");
+	
+
+// 	let urlDog = "https://dog.ceo/api/breeds/image/random";
+	
+// 	fetch(urlDog)
+
+// 	.then(resp => resp.json())
+
+// 	.then((data) => {
+// 		let dogImg = data.message
+// 		// console.log(dogImg)
+// 		let dogPic = document.createElement("img")
+// 			dogPic.setAttribute("src", dogImg)
+// 			dogPic.setAttribute("class", "img-fluid")
+// 			pictureArea.append(dogPic)
+// 	}
+// 	)
+
+
+// 	.catch(err => console.error(err));
+// }
