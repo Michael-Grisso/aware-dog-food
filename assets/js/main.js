@@ -230,27 +230,27 @@ function searchFood() {
       //console.log(data)
 
       for (let product of data.products) {
-        let productName = product.product_name;
-        let productImage = product.image_url;
-        let ingredientList = product.ingredients;
-        console.log(ingredientList); //
+        let productName = product.product_name
+        let productImage = product.image_url
+        let ingredientList = product.ingredients
+        console.log(ingredientList) //
 
-        let resultBox = document.createElement("div");
+        let resultBox = document.createElement("div")
         resultBox.setAttribute(
           "class",
           "col-lg-4 col-md-6 portfolio-item filter-app"
         );
 
-        let result = document.createElement("h4");
-        result.innerText = productName;
-        resultBox.append(result);
+        let result = document.createElement("h4")
+        result.innerText = productName
+        resultBox.append(result)
 
-        let pic = document.createElement("img");
-        pic.setAttribute("src", productImage);
-        pic.setAttribute("class", "img-fluid");
-        resultBox.append(pic);
+        let pic = document.createElement("img")
+        pic.setAttribute("src", productImage)
+        pic.setAttribute("class", "img-fluid")
+        resultBox.append(pic)
 
-        searchResultArea.appendChild(resultBox);
+        searchResultArea.appendChild(resultBox)
       }
     })
     .catch((err) => console.error(err));
@@ -273,19 +273,19 @@ function dogFacts() {
     .then((resp) => resp.json())
 
     .then((data) => {
-      let dogFactArea = document.getElementById("dogFact");
-      let factList = document.createElement("ol");
+      let dogFactArea = document.getElementById("dogFact")
+      let factList = document.createElement("ol")
 
       console.log(data); //data is array of fact objects
       for (let obj of data) {
-        let randomFact = obj.fact;
+        let randomFact = obj.fact
 
-        let factEl = document.createElement("li");
-        factEl.setAttribute("class", "dogFactListedFacts");
-        factEl.innerText = randomFact;
-        factList.appendChild(factEl);
+        let factEl = document.createElement("li")
+        factEl.setAttribute("class", "dogFactListedFacts")
+        factEl.innerText = randomFact
+        factList.appendChild(factEl)
       }
-      dogFactArea.appendChild(factList);
+      dogFactArea.appendChild(factList)
     })
 
     .catch((err) => console.error(err));
