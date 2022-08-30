@@ -458,7 +458,7 @@ h6 {
 }
 
 .search-field {
-	background: #D3D3D3;
+	background: #d3d3d3;
 	font-family: "Poppins", sans-serif;
 	font-weight: 250;
 	font-size: 16px;
@@ -468,8 +468,7 @@ h6 {
 	border-radius: 50px;
 	transition: 0.5s;
 	margin: 4px;
-	border: 2px solid ;
-	
+	border: 2px solid;
 }
 
 .btn-get-started {
@@ -487,19 +486,21 @@ h6 {
 	color: #fff;
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+	/* Chrome, Firefox, Opera, Safari 10.1+ */
 	color: rgba(0, 0, 0, 1);
 	font-weight: 500;
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-	color: white;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-	color: white;
-  }
+}
 
+:-ms-input-placeholder {
+	/* Internet Explorer 10-11 */
+	color: white;
+}
+
+::-ms-input-placeholder {
+	/* Microsoft Edge */
+	color: white;
+}
 
 #hero .btn-get-started:hover {
 	background: black;
@@ -592,7 +593,8 @@ section {
 #about {
 	background: rgb(255, 255, 255);
 	border-radius: 10px;
-	padding: 4px 0;
+	text-align: center;
+	padding-left: 32%;
 }
 
 #about .about-container .background {
