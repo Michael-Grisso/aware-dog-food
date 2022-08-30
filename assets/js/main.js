@@ -222,7 +222,7 @@ function searchFood() {
   // let UPCresultBox = document.getElementById("searchResultUPCcodes");
   let searchResultArea = document.getElementById("searchResultsArea");
 
-  let url = `https://us.openpetfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=dog_food&json=true&tagtype_1=allergens&tag_contains_1=without&tag_1=${inputAllergen}`;
+  let url = `https://us.openpetfoodfacts.org/cgi/search.pl?action=process&tagtype_0=categories&tag_contains_0=contains&tag_0=dog_food&json=true&tagtype_1=allergens&tag_contains_1=does_not_contain&tag_1=${inputAllergen}`;
   // console.log(url);
   fetch(url)
     .then((resp) => resp.json())
@@ -253,6 +253,51 @@ function searchFood() {
         searchResultArea.appendChild(resultBox)
       }
     })
+
+  // filtering function
+    // .then((data) => {
+    //   for (let product of data.products) {
+    //     let productName = product.product_name
+    //     let productImage = product.image_url
+    //     let ingredientList = product.ingredients_text
+    //     let ingredientArr = ingredientList.split(", ")
+        
+
+    //     let allergenCounter = 0
+    //     for (let ingredient of ingredientArr) {
+    //       console.log(ingredient)
+    //       console.log(inputAllergen)
+    //       if (ingredient === inputAllergen) {
+    //         allergenCounter++
+    //       }
+    //     }
+
+    //     console.log(allergenCounter)
+        
+        
+    //     if (allergenCounter == 0) {
+
+    //       let resultBox = document.createElement("div")
+    //       resultBox.setAttribute(
+    //         "class",
+    //         "col-lg-4 col-md-6 portfolio-item filter-app"
+    //       );
+
+    //       let result = document.createElement("h4")
+    //       result.innerText = productName
+    //       resultBox.append(result)
+
+    //       let pic = document.createElement("img")
+    //       pic.setAttribute("src", productImage)
+    //       pic.setAttribute("class", "img-fluid")
+    //       resultBox.append(pic)
+
+    //       searchResultArea.appendChild(resultBox)
+    //     }
+    //   }
+    // })
+
+
     .catch((err) => console.error(err));
 }
 
