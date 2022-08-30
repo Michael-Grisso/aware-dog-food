@@ -1,362 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-		<title>Aware Food</title>
-		<meta content="" name="description" />
-		<meta content="" name="keywords" />
+    <title>Aware Food</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
 
-		<!-- Favicons -->
-		<link href="assets/img/favicon.png" rel="icon" />
-		<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-		<!-- Google Fonts -->
-		<link
-			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
-			rel="stylesheet"
-		/>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700"
+      rel="stylesheet"
+    />
 
-		<!-- Vendor CSS Files -->
-		<link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-		<link
-			href="assets/vendor/bootstrap/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
-		<link
-			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-			rel="stylesheet"
-		/>
-		<link
-			href="assets/vendor/boxicons/css/boxicons.min.css"
-			rel="stylesheet"
-		/>
-		<link
-			href="assets/vendor/glightbox/css/glightbox.min.css"
-			rel="stylesheet"
-		/>
-		<link
-			href="assets/vendor/swiper/swiper-bundle.min.css"
-			rel="stylesheet"
-		/>
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
-		<!-- Template Main CSS File -->
-		<link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
 
-		<!-- =======================================================
-  * Template Name: Regna - v4.8.1
-  * Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-	</head>
+  <body onload="dogFacts()">
+    <!-- Header -->
+    <header
+      id="header"
+      class="fixed-top d-flex align-items-center header-transparent"
+    >
+      <div class="container d-flex justify-content-between align-items-center">
+        <div id="logo">
+          <h1><a href="index.html">A|F</a></h1>
+        </div>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a class="nav-link scrollto active" href="#hero">Home</a>
+            </li>
 
-	<body onload="dogFacts()">
-		<!-- ======= Header ======= -->
-		<header
-			id="header"
-			class="fixed-top d-flex align-items-center header-transparent"
-		>
-			<div
-				class="container d-flex justify-content-between align-items-center"
-			>
-				<div id="logo">
-					<h1><a href="index.html">A|F</a></h1>
-				</div>
-				<nav id="navbar" class="navbar">
-					<ul>
-						<li>
-							<a class="nav-link scrollto active" href="#hero"
-								>Home</a
-							>
-						</li>
-
-						<!-- <li>
+            <!-- <li>
 							<a class="nav-link scrollto" href="#portfolio"
 								>Portfolio</a
 							>
 						</li> -->
-						<li>
-							<a class="nav-link scrollto" href="#team">Team</a>
-						</li>
-					</ul>
-					<i class="bi bi-list mobile-nav-toggle"></i>
-				</nav>
-				<!-- .navbar -->
-			</div>
-		</header>
-		<!-- End Header -->
+            <li>
+              <a class="nav-link scrollto" href="#team">Team</a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
 
-		<!-- ======= Hero Section ======= -->
-		<section id="hero">
-			<div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-				<h1>Aware Food</h1>
-				<h2>Find the safest food for your dog.</h2>
-				<input
-					class="search-field"
-					type="text"
-					id="inputForSearch"
-					placeholder="Enter food allergy..."
-				/>
-				<!--Get the api connection to function after clicking Get Started-->
-				<input
-					type="button"
-					id="inputBtn"
-					class="btn-get-started"
-					value="Remove Allergen"
-					onclick="searchFood()"
-				/>
-			</div>
-		</section>
-		<!-- End Hero Section -->
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+        <h1>Aware Food</h1>
+        <h2>Find the safest food for your dog.</h2>
+        <input
+          class="search-field"
+          type="text"
+          id="inputForSearch"
+          placeholder="Enter food allergy..."
+        />
+        <!--Get the api connection to function after clicking Get Started-->
+        <input
+          type="button"
+          id="inputBtn"
+          class="btn-get-started"
+          value="RESULTS"
+          onclick="searchFood()"
+        />
+      </div>
+    </section>
+    <!-- End Hero Section -->
 
-		<main id="main">
-			<!-- ======= Portfolio Section ======= -->
-			<section id="portfolio" class="portfolio">
-				<div class="container" data-aos="fade-up">
-					<div class="section-header">
-						<h3 class="section-title">Results</h3>
-					</div>
+    <main id="main">
+      <!-- Results Section -->
+      <section id="portfolio" class="portfolio">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h3 class="section-title">Results</h3>
+            <hr>
+          </div>
 
-					<div
-						id="searchResultsArea"
-						class="row portfolio-container"
-						data-aos="fade-up"
-						data-aos-delay="200"
-					>
-						<!-- 
-						<div id="searchResultUPCcodes" class="col-lg-4 col-md-6 portfolio-item filter-app">
-							<h3>UPC code search results</h3>
-						
-							<img
-								src="assets/img/portfolio/portfolio-2.jpg"
-								class="img-fluid"
-								alt=""
-							/>
-						</div>
+          <div id="searchResultsArea" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          </div>
+        </div>
+      </section>
+      <!-- End Results Section -->
 
-						<div
-							class="col-lg-4 col-md-6 portfolio-item filter-app"
-						>
-							<img
-								src="assets/img/portfolio/portfolio-3.jpg"
-								class="img-fluid"
-								alt=""
-							/>
-						</div>
+      <!-- Dog Facts Section -->
+      <section id="about">
+        <div class="container" data-aos="fade-up">
+          <div class="row about-container">
+            <div class="col-lg-6 content order-lg-1 order-2">
+              <h2 class="title">Fun Dog Facts - Did You Know?</h2>
+              <hr>
 
-						<div
-							class="col-lg-4 col-md-6 portfolio-item filter-card"
-						>
-							<img
-								src="assets/img/portfolio/portfolio-4.jpg"
-								class="img-fluid"
-								alt=""
-							/>
-						</div>
+              <div
+                class="icon-box"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                id="dogFact"
+              ></div>
+            </div>
 
-						<div
-							class="col-lg-4 col-md-6 portfolio-item filter-web"
-						>
-							<img
-								src="assets/img/portfolio/portfolio-5.jpg"
-								class="img-fluid"
-								alt=""
-							/>
-						</div>
+            <div
+              class="col-lg-6 background order-lg-2 order-1"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Dog Facts Section -->
 
-						<div
-							class="col-lg-4 col-md-6 portfolio-item filter-app"
-						>
-							<img
-								src="assets/img/portfolio/portfolio-6.jpg"
-								class="img-fluid"
-								alt=""
-							/>
-						</div>
+      <!-- Team Section -->
+      <section id="team">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h3 class="section-title">Team</h3>
+            <hr>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-6">
+              <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="pic">
+                  <img class="images" src="assets/img/MiguelRR.jpg" alt="Miguel picture" />
+                </div>
+                <h4>Miguel Rodriguez</h4>
+                <a
+                  href="https://github.com/CapicuPR"
+                  title="Miguel Rodriguez GitHub"
+                  ><img
+                    src="https://www.freeiconspng.com/uploads/github-icon-1.png"
+                    width="35"
+                    alt="GitHub image"
+                /></a>
+              </div>
+            </div>
 
-						<div
-							class="col-lg-4 col-md-6 portfolio-item filter-card"
-						>
-							<img
-								src="assets/img/portfolio/portfolio-7.jpg"
-								class="img-fluid"
-								alt=""
-							/>
-						</div>
+            <div class="col-lg-3 col-md-6">
+              <div class="member" data-aos="fade-up" data-aos-delay="200">
+                <div class="pic">
+                  <img class="images" src="assets/img/TysonAndMe.JPG" alt="My dog and I" />
+                </div>
+                <h4>Michael Allen</h4>
+                <a
+                  href="https://github.com/Oceanriderrr"
+                  title="Michael Allen GitHub"
+                  ><img  src="https://www.freeiconspng.com/uploads/github-icon-1.png" width="35" alt="GitHub image"
+                /></a>
+              </div>
+            </div>
 
-						<div
-							class="col-lg-4 col-md-6 portfolio-item filter-card"
-						>
-							<img
-								src="assets/img/portfolio/portfolio-8.jpg"
-								class="img-fluid"
-								alt=""
-							/>
-						</div>
+            <div class="col-lg-3 col-md-6">
+              <div class="member" data-aos="fade-up" data-aos-delay="300">
+                <div class="pic">
+                  <img class="images" src="assets/img/helitour.png" alt="" />
+                </div>
+                <h4>Michael Grisso</h4>
+                <a
+                  href="https://github.com/Michael-Grisso"
+                  title="Michael Grisso GitHub"
+                  ><img
+                    src="https://www.freeiconspng.com/uploads/github-icon-1.png"
+                    width="35"
+                    alt="GitHub image"
+                /></a>
+              </div>
+            </div>
 
-						<div
-							class="col-lg-4 col-md-6 portfolio-item filter-web"
-						>
-							<img
-								src="assets/img/portfolio/portfolio-9.jpg"
-								class="img-fluid"
-								alt=""
-							/>
-						</div> -->
-					</div>
-				</div>
-			</section>
-			<!-- End Portfolio Section -->
+            <div class="col-lg-3 col-md-6">
+              <div class="member" data-aos="fade-up" data-aos-delay="400">
+                <div class="pic"></div>
+                <h4>Eben Donkor</h4>
+                <a
+                  href="https://github.com/ebendonkor"
+                  title="Eben Donkor GitHub"
+                  ><img
+                    src="https://www.freeiconspng.com/uploads/github-icon-1.png"
+                    width="35"
+                    alt="GitHub image"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+    </main>
+    <!-- End #main -->
 
-			<!-- ======= About Section ======= -->
-			<section id="about">
-				<div class="container" data-aos="fade-up">
-					<div class="row about-container">
-						<div class="col-lg-6 content order-lg-1 order-2">
-							<h2 class="title">A few fun dog facts</h2>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <!-- End Vendor JS Files -->
 
-							<div
-								class="icon-box"
-								data-aos="fade-up"
-								data-aos-delay="100"
-								id="dogFact"
-							>
-								<!-- <div class="icon" >
-									<i class="bi bi-briefcase"></i>
-								</div>
-								<h4 class="title">
-									<a href="">Random Dog Picture</a>
-								</h4> -->
-								<!-- Create this using DOM -->
-								<!-- <p class="description" id="dogFactArea">
-									Et harum quidem rerum facilis est etcd
-									expedita distinctio. Nam libero tempore, cum
-									soluta nobis est eligendi
-								</p> -->
-							</div>
-						</div>
-
-						<div
-							class="col-lg-6 background order-lg-2 order-1"
-							data-aos="fade-left"
-							data-aos-delay="100"
-						></div>
-					</div>
-				</div>
-			</section>
-			<!-- End About Section -->
-
-			<!-- ======= Team Section ======= -->
-			<section id="team">
-				<div class="container" data-aos="fade-up">
-					<div class="section-header">
-						<h3 class="section-title">Team</h3>
-					</div>
-					<div class="row">
-						<div class="col-lg-3 col-md-6">
-							<div
-								class="member"
-								data-aos="fade-up"
-								data-aos-delay="100"
-							>
-								<div class="pic">
-									<img
-										src="assets/img/MiguelRR.jpg"
-										alt="Miguel picture"
-									/>
-								</div>
-								<h4>Miguel Rodriguez</h4>
-								<a
-									href="https://github.com/CapicuPR"
-									title="Miguel Rodriguez GitHub"
-									><img
-										src="https://www.freeiconspng.com/uploads/github-icon-1.png"
-										width="35"
-										alt="GitHub image"
-								/></a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-6">
-							<div
-								class="member"
-								data-aos="fade-up"
-								data-aos-delay="200"
-							>
-								<div class="pic">
-									<img
-										src="assets/img/TysonAndMe.JPG"
-										alt="My dog and I"
-									/>
-								</div>
-								<h4>Michael Allen</h4>
-								<a
-									href="https://github.com/Oceanriderrr"
-									title="Michael Allen GitHub"
-									><img
-										src="https://www.freeiconspng.com/uploads/github-icon-1.png"
-										width="35"
-										alt="GitHub image"
-								/></a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-6">
-							<div
-								class="member"
-								data-aos="fade-up"
-								data-aos-delay="300"
-							>
-								<div class="pic">
-									<img src="assets/img/helitour.png" alt="" />
-								</div>
-								<h4>Michael Grisso</h4>
-								<a
-									href="https://github.com/Michael-Grisso"
-									title="Michael Grisso GitHub"
-									><img
-										src="https://www.freeiconspng.com/uploads/github-icon-1.png"
-										width="35"
-										alt="GitHub image"
-								/></a>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-6">
-							<div
-								class="member"
-								data-aos="fade-up"
-								data-aos-delay="400"
-							>
-								<div class="pic"></div>
-								<h4>Eben Donkor</h4>
-								<a
-									href="https://github.com/ebendonkor"
-									title="Eben Donkor GitHub"
-									><img
-										src="https://www.freeiconspng.com/uploads/github-icon-1.png"
-										width="35"
-										alt="GitHub image"
-								/></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- End Team Section -->
-		</main>
-		<!-- End #main -->
-		<!-- Vendor JS Files -->
-		<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-		<script src="assets/vendor/aos/aos.js"></script>
-		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-		<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-		<script src="assets/vendor/php-email-form/validate.js"></script>
-		<!-- Template Main JS File -->
-		<script src="assets/js/main.js"></script>
-	</body>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- End Template Main JS File -->
+  </body>
 </html>

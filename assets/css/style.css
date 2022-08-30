@@ -1,13 +1,4 @@
-/**
-* Template Name: Regna - v4.8.1
-* Template URL: https://bootstrapmade.com/regna-bootstrap-onepage-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
 	background: #fff;
 	color: #666666;
@@ -42,6 +33,14 @@ h6 {
 	font-weight: 400;
 	margin: 0 0 20px 0;
 	padding: 0;
+}
+
+hr {
+	position: relative;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: 2px;
+    border: 2px solid rgba(52, 59, 64, 0.9);
 }
 
 /*--------------------------------------------------------------
@@ -86,17 +85,19 @@ h6 {
 	}
 }
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+/* HEADER */
+
+/*this is the color of header/navbar area as you scroll*/
 #header {
 	height: 90px;
 	transition: all 0.5s;
 	z-index: 997;
-	background: rgba(52, 59, 64, 0.9);
+	background: rgba(52, 59, 64, 0.9); 
 }
 
-#header #logo h1 {
+/*this area changes the A|F logo in top left area of page*/
+
+#header #logo h1 { 
 	font-size: 32px;
 	margin: 0;
 	line-height: 1;
@@ -106,40 +107,46 @@ h6 {
 	text-transform: uppercase;
 }
 
+/*this area keeps logo text white*/
 #header #logo h1 a,
 #header #logo h1 a:hover {
-	color: #fff;
+	color: #ffffff;
 }
 
-#header #logo img {
+/*this area is not needed since our logo isn't an img*/
+/* #header #logo img {
 	padding: 0;
 	margin: 0;
-}
+} */
 
+/*this css removes the header background color when you land on page*/
 #header.header-transparent {
 	background: transparent;
 }
 
+/*this css turns the logo background to a darker color so it stays on scroll
+  without it the A|F logo is hard to see and overlaps all areas during scrolling*/
 #header.header-scrolled {
 	background: rgba(52, 59, 64, 0.9);
 	height: 70px;
 	transition: all 0.5s;
 }
 
+/*this css offers a little better spacing for the header as you scroll page */
 .scrolled-offset {
 	margin-top: 70px;
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/**
-* Desktop Navigation 
-*/
-.navbar {
-	padding: 0;
-}
+/* NAVBAR SECTION */
 
+/*this css wasn't needed.  Home and Team are still in same location after removing.
+  However, if you change to 10px or 100px they move that many pixels to the left*/
+/* .navbar {
+	padding: 0px;
+} */
+
+/*without this css our home and team would be set as a list with bullet points
+  instead of inline with one another*/
 .navbar ul {
 	margin: 0;
 	padding: 0;
@@ -148,15 +155,20 @@ h6 {
 	align-items: center;
 }
 
-.navbar li {
+/*this css is not needed.  no change after removing.*/
+/* .navbar li {
 	position: relative;
-}
+} */
 
+/*without this css the home and team would be pushed too far together*/
 .navbar > ul > li {
 	white-space: nowrap;
 	padding: 10px 0 10px 24px;
 }
 
+/*this css allows space separation between home and team.  without it 
+  there is one line under both and about 10px lower.  team is also 
+  faded gray until hovering.*/
 .navbar a,
 .navbar a:focus {
 	display: flex;
@@ -173,13 +185,17 @@ h6 {
 	text-transform: uppercase;
 }
 
-.navbar a i,
+/*code not needed. no change after removing*/
+/* .navbar a i,
 .navbar a:focus i {
 	font-size: 12px;
 	line-height: 0;
 	margin-left: 5px;
-}
+} */
 
+/*this css provides the lines under home and team as you transition.  
+  without it you only see the home and team with no transitional
+  lines*/
 .navbar > ul > li > a:before {
 	content: "";
 	position: absolute;
@@ -193,6 +209,8 @@ h6 {
 	transition: all 0.3s ease-in-out 0s;
 }
 
+/*same issue here as above.  without it there are no transitional
+  lines, just home and team*/
 .navbar a:hover:before,
 .navbar li:hover > a:before,
 .navbar .active:before {
@@ -200,6 +218,7 @@ h6 {
 	transform: scaleX(1);
 }
 
+/*without this css home and team will be grayed out on hover*/
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
@@ -207,7 +226,9 @@ h6 {
 	color: #fff;
 }
 
-.navbar .dropdown ul {
+/*this css is not needed.  we aren't using any sort of dropdown.
+  no changes occurred after removing.*/
+/* .navbar .dropdown ul {
 	display: block;
 	position: absolute;
 	left: 24px;
@@ -220,61 +241,59 @@ h6 {
 	background: #fff;
 	box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 	transition: 0.3s;
-}
+} */
 
-.navbar .dropdown ul li {
+/* .navbar .dropdown ul li {
 	min-width: 200px;
-}
+} */
 
-.navbar .dropdown ul a {
+/* .navbar .dropdown ul a {
 	padding: 10px 20px;
 	font-size: 14px;
 	text-transform: none;
 	color: #666666;
-}
+} */
 
-.navbar .dropdown ul a i {
+/* .navbar .dropdown ul a i {
 	font-size: 12px;
-}
+} */
 
-.navbar .dropdown ul a:hover,
+/* .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover > a {
 	color: #2dc997;
-}
+} */
 
-.navbar .dropdown:hover > ul {
+/* .navbar .dropdown:hover > ul {
 	opacity: 1;
 	top: 100%;
 	visibility: visible;
-}
+} */
 
-.navbar .dropdown .dropdown ul {
+/* .navbar .dropdown .dropdown ul {
 	top: 0;
 	left: calc(100% - 30px);
 	visibility: hidden;
-}
+} */
 
-.navbar .dropdown .dropdown:hover > ul {
+/* .navbar .dropdown .dropdown:hover > ul {
 	opacity: 1;
 	top: 0;
 	left: 100%;
 	visibility: visible;
-}
+} */
 
-@media (max-width: 1366px) {
+/* @media (max-width: 1366px) {
 	.navbar .dropdown .dropdown ul {
 		left: -90%;
-	}
+	} */
 
-	.navbar .dropdown .dropdown:hover > ul {
+	/* .navbar .dropdown .dropdown:hover > ul {
 		left: -100%;
 	}
-}
+} */
 
-/**
-* Mobile Navigation 
-*/
+/* MOBILE NAVIGATION */
 .mobile-nav-toggle {
 	color: #fff;
 	font-size: 28px;
@@ -353,7 +372,7 @@ h6 {
 	margin: 15px;
 }
 
-.navbar-mobile .dropdown ul {
+/* .navbar-mobile .dropdown ul {
 	position: static;
 	display: none;
 	margin: 10px 20px;
@@ -385,11 +404,12 @@ h6 {
 
 .navbar-mobile .dropdown > .dropdown-active {
 	display: block;
-}
+} */
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+/* AWARE DOG FOOD STARTING AREA */
+
+/*without this css our page would mesh together overlapping info
+  and of course no background image*/
 #hero {
 	width: 100%;
 	height: 100vh;
@@ -404,6 +424,8 @@ h6 {
 	}
 }
 
+/*removing this css brightens the background image, but makes it 
+  difficult to see the text below Aware Food*/
 #hero:before {
 	content: "";
 	background: rgba(0, 0, 0, 0.6);
@@ -414,6 +436,9 @@ h6 {
 	right: 0;
 }
 
+/*without this css our Aware Food text and the buttons below it
+  shift to the top left of the page.  buttons also become inline
+  instead of vertical.*/
 #hero .hero-container {
 	position: absolute;
 	bottom: 0;
@@ -427,6 +452,8 @@ h6 {
 	text-align: center;
 }
 
+/*this changes the Aware Food text.  without it the text is not
+  uppercase and is grayed out (or a different color I'm color-blind)*/
 #hero h1 {
 	margin: 30px 0 10px 0;
 	font-size: 48px;
@@ -443,6 +470,8 @@ h6 {
 	}
 }
 
+/*this css is for the Find the safest food for your dog text.
+  same thing happens as above if removed.*/
 #hero h2 {
 	color: #eee;
 	margin-bottom: 50px;
@@ -457,38 +486,48 @@ h6 {
 	}
 }
 
+/*it's all in the class.  without it the search area is 
+  a simple horizontal rectangle*/
 .search-field {
-	background: #d3d3d3;
-	font-family: "Poppins", sans-serif;
-	font-weight: 250;
-	font-size: 16px;
-	letter-spacing: 1px;
-	display: inline-block;
-	padding: 8px 28px;
-	border-radius: 50px;
-	transition: 0.5s;
-	margin: 4px;
+	background: rgba(77, 77, 77, 0.5);
 	border: 2px solid;
+	border-radius: 25px;
+	color: white;
+	display: inline-block;
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	font-weight: 125;
+	letter-spacing: 1px;
+	margin: 8px;
+	padding: 8px 16px;
+	transition: 0.5s;
+	width: 25%;
 }
 
+/* this is for the results button */
 .btn-get-started {
-	background: transparent;
+	background: rgba(77, 77, 77, 1);
 	font-family: "Poppins", sans-serif;
 	font-weight: 500;
 	font-size: 16px;
 	letter-spacing: 1px;
 	display: inline-block;
-	padding: 8px 28px;
-	border-radius: 50px;
+	padding: 8px 8px 8px 8px;
+	border-radius: 25px;
 	transition: 0.5s;
 	margin: 4px;
 	border: 2px solid #fff;
 	color: #fff;
+	width: 10%;
 }
 
+/* can't remember why we added this, but had something
+  to do with getting the text color to change in the 
+  buttons */
 ::placeholder {
 	/* Chrome, Firefox, Opera, Safari 10.1+ */
-	color: rgba(0, 0, 0, 1);
+
+	color: white;
 	font-weight: 500;
 }
 
@@ -502,393 +541,76 @@ h6 {
 	color: white;
 }
 
+/*this is for specifically hovering over the 
+  results button.  border is background and 
+  text color is original background color */
 #hero .btn-get-started:hover {
-	background: black;
-	color: white;
-	font-size: 18px;
+	background: white;
+	border:solid 2px rgba(77, 77, 77, 0.9);
+	color: rgba(77, 77, 77, 0.9);
+	font-size: 16px;
 }
 
-/*--------------------------------------------------------------
-# Sections
---------------------------------------------------------------*/
+/* SECTIONS */
+
 section {
+
 	overflow: hidden;
 }
 
-/* Sections Header
+
+/* DOG FOOD FACTS SECTION */
+#about {
+	background: rgb(255, 255, 255);
+	color: black;
+	font-size: 20px;
+	text-align: center;
+	padding-left: 33.5%;
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+/* RESULTS SECTION */
+#portfolio {
+	background: #f7f7f7;
+	padding: 80px 0 80px 0;
+}
+
+/* Results Section Header
 --------------------------------*/
 .section-header .section-title {
 	font-size: 32px;
-	color: #111;
+	color: rgba(77, 77, 77, 0.9);
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: 700;
-	margin-bottom: 25px;
+	margin-bottom: 8px;
 }
 
-.section-header .section-description {
-	text-align: center;
-	padding-bottom: 40px;
-	color: #999;
-}
 
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-.breadcrumbs {
-	padding: 20px 0;
-	background-color: whitesmoke;
-	min-height: 40px;
-	margin-top: 92px;
-}
 
-.breadcrumbs h2 {
-	font-size: 24px;
-	font-weight: 300;
-	margin: 0;
-}
-
-@media (max-width: 992px) {
-	.breadcrumbs h2 {
-		margin: 0 0 10px 0;
-	}
-}
-
-.breadcrumbs ol {
-	display: flex;
-	flex-wrap: wrap;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	font-size: 14px;
-}
-
-.breadcrumbs ol li + li {
-	padding-left: 10px;
-}
-
-.breadcrumbs ol li + li::before {
-	display: inline-block;
-	padding-right: 10px;
-	color: #6c757d;
-	content: "/";
-}
-
-@media (max-width: 768px) {
-	.breadcrumbs .d-flex {
-		display: block !important;
-	}
-
-	.breadcrumbs ol {
-		display: block;
-	}
-
-	.breadcrumbs ol li {
-		display: inline-block;
-	}
-}
-
-/* About Us Section
---------------------------------*/
-#about {
-	background: rgb(255, 255, 255);
-	border-radius: 10px;
-	text-align: center;
-	padding-left: 32%;
-}
-
-#about .about-container .background {
-	min-height: 300px;
-	background: url(../img/about-img.jpg) center top no-repeat;
-	margin-bottom: 10px;
-}
-
-#about .about-container .content {
-	background: #fff;
-}
-
-#about .about-container .title {
-	color: #333;
-	font-weight: 700;
-	font-size: 32px;
-}
-
-@media (max-width: 768px) {
-	#about .about-container .title {
-		padding-top: 15px;
-	}
-}
-
-#about .about-container p {
-	line-height: 26px;
-}
-
-#about .about-container p:last-child {
-	margin-bottom: 0;
-}
-
-#about .about-container .icon-box {
-	background: #fff;
-	background-size: cover;
-	padding: 0 0 30px 0;
-}
-
-#about .about-container .icon-box .icon {
-	float: left;
-	background: #fff;
-	width: 64px;
-	height: 64px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
-	border-radius: 50%;
-	border: 2px solid #2dc997;
-}
-
-#about .about-container .icon-box .icon i {
-	color: #2dc997;
-	font-size: 24px;
-	line-height: 0;
-}
-
-#about .about-container .icon-box .title {
-	margin-left: 80px;
-	font-weight: 500;
-	margin-bottom: 5px;
-	font-size: 18px;
-	text-transform: uppercase;
-}
-
-#about .about-container .icon-box .title a {
-	color: #111;
-}
-
-#about .about-container .icon-box .description {
-	margin-left: 80px;
-	line-height: 24px;
-	font-size: 14px;
-}
-
-/* Facts Section
---------------------------------*/
-#facts {
-	background: #f7f7f7;
-	padding: 80px 0 60px 0;
-}
-
-#facts .counters span {
-	font-size: 48px;
-	display: block;
-	color: #2dc997;
-}
-
-#facts .counters p {
-	padding: 0;
-	margin: 0 0 20px 0;
-	font-family: "Poppins", sans-serif;
-	font-size: 14px;
-}
-
-/* Services Section
---------------------------------*/
-#services {
-	background: #fff;
-	background-size: cover;
-	padding: 80px 0 60px 0;
-}
-
-#services .box {
-	padding: 50px 20px;
-	margin-bottom: 50px;
-	text-align: center;
-	border: 1px solid #e6e6e6;
-	height: 200px;
-	position: relative;
-	background: #fafafa;
-}
-
-#services .icon {
-	position: absolute;
-	top: -36px;
-	left: calc(50% - 36px);
-	transition: 0.2s;
-	border-radius: 50%;
-	border: 6px solid #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
-	width: 72px;
-	height: 72px;
-	background: #2dc997;
-}
-
-#services .icon a {
-	display: inline-block;
-}
-
-#services .icon i {
-	color: #fff;
-	font-size: 24px;
-	line-height: 0;
-}
-
-#services .box:hover .icon {
-	background: #fff;
-	border: 2px solid #2dc997;
-}
-
-#services .box:hover .icon i {
-	color: #2dc997;
-}
-
-#services .box:hover .icon a {
-	color: #2dc997;
-}
-
-#services .title {
-	font-weight: 700;
-	font-size: 18px;
-	margin-bottom: 15px;
-	text-transform: uppercase;
-}
-
-#services .title a {
-	color: #111;
-}
-
-#services .description {
-	font-size: 14px;
-	line-height: 24px;
-}
-
-/* Call To Action Section
---------------------------------*/
-#call-to-action {
-	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-		url(../img/call-to-action-bg.jpg) fixed center center;
-	background-size: cover;
-	padding: 80px 0;
-}
-
-@media (max-width: 1024px) {
-	#call-to-action {
-		background-attachment: scroll;
-	}
-}
-
-#call-to-action .cta-title {
-	color: #fff;
-	font-size: 28px;
-	font-weight: 700;
-}
-
-#call-to-action .cta-text {
-	color: #fff;
-}
-
-@media (min-width: 769px) {
-	#call-to-action .cta-btn-container {
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-	}
-}
-
-#call-to-action .cta-btn {
-	font-family: "Poppins", sans-serif;
-	text-transform: uppercase;
-	font-weight: 500;
-	font-size: 16px;
-	letter-spacing: 1px;
-	display: inline-block;
-	padding: 8px 30px;
-	border-radius: 50px;
-	transition: 0.5s;
-	margin: 10px;
-	border: 2px solid #fff;
-	color: #fff;
-}
-
-#call-to-action .cta-btn:hover {
-	background: #2dc997;
-	border: 2px solid #2dc997;
-}
-
-/* Portfolio Section
---------------------------------*/
-#portfolio {
-	background: #f7f7f7;
-	padding: 80px 0;
-}
-
-#portfolio #portfolio-flters {
-	padding: 0;
-	margin: 0 auto 25px auto;
-	list-style: none;
-	text-align: center;
-	border-radius: 50px;
-}
-
-#portfolio #portfolio-flters li {
-	cursor: pointer;
-	display: inline-block;
-	padding: 12px 18px 14px 18px;
-	font-size: 14px;
-	font-weight: 500;
-	line-height: 1;
-	color: #666666;
-	margin: 0 5px 10px 5px;
-	transition: all ease-in-out 0.3s;
-	background: white;
-	border-radius: 4px;
-}
-
-#portfolio #portfolio-flters li:hover,
-#portfolio #portfolio-flters li.filter-active {
-	color: #fff;
-	background: #2dc997;
-}
-
-#portfolio #portfolio-flters li:last-child {
-	margin-right: 0;
-}
-
+/*without this css all food titles in results
+  will be pushed to image above it*/
 #portfolio .portfolio-item {
 	margin-bottom: 30px;
 	overflow: hidden;
 }
 
+
 #portfolio .portfolio-item img {
+	border: 2px solid black;
+	border-radius: 8px;
+	display: block;
+	height: 450px;
+	margin: 40px auto 20px auto;
 	position: relative;
 	top: 0;
 	transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-#portfolio .portfolio-item .portfolio-info {
-	opacity: 0;
-	position: absolute;
-	left: 12px;
-	right: 12px;
-	bottom: -50px;
-	z-index: 3;
-	transition: all ease-in-out 0.3s;
-	background: #2dc997;
-	padding: 15px 20px;
-}
-
-#portfolio .portfolio-item .portfolio-info h4 {
-	font-size: 18px;
-	color: #fff;
-	font-weight: 600;
+	width: 300px;
 }
 
 #portfolio .portfolio-item .portfolio-info p {
 	color: #fff;
-	font-size: 14px;
 	margin-bottom: 0;
 }
 
@@ -896,7 +618,6 @@ section {
 #portfolio .portfolio-item .portfolio-info .details-link {
 	position: absolute;
 	right: 50px;
-	font-size: 24px;
 	top: calc(50% - 18px);
 	color: white;
 	transition: ease-in-out 0.3s;
@@ -915,87 +636,12 @@ section {
 	top: -30px;
 }
 
-#portfolio .portfolio-item:hover .portfolio-info {
-	opacity: 1;
-	bottom: 0;
-}
 
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-	padding-top: 40px;
-}
 
-.portfolio-details .portfolio-details-slider img {
-	width: 100%;
-}
-
-.portfolio-details .portfolio-details-slider .swiper-pagination {
-	margin-top: 20px;
-	position: relative;
-}
-
-.portfolio-details
-	.portfolio-details-slider
-	.swiper-pagination
-	.swiper-pagination-bullet {
-	width: 12px;
-	height: 12px;
-	background-color: #fff;
-	opacity: 1;
-	border: 1px solid #2dc997;
-}
-
-.portfolio-details
-	.portfolio-details-slider
-	.swiper-pagination
-	.swiper-pagination-bullet-active {
-	background-color: #2dc997;
-}
-
-.portfolio-details .portfolio-info {
-	padding: 30px;
-	box-shadow: 0px 0 30px rgba(102, 102, 102, 0.08);
-}
-
-.portfolio-details .portfolio-info h3 {
-	font-size: 22px;
-	font-weight: 700;
-	margin-bottom: 20px;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-	list-style: none;
-	padding: 0;
-	font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-	margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-	padding-top: 30px;
-}
-
-.portfolio-details .portfolio-description h2 {
-	font-size: 26px;
-	font-weight: 700;
-	margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-	padding: 0;
-}
-
-/* Team Section
---------------------------------*/
+/* TEAM SECTION */
 #team {
 	background: #fff;
-	padding: 80px 0 60px 0;
+	padding: 80px 0 80px 0;
 }
 
 #team .member {
@@ -1003,171 +649,25 @@ section {
 	margin-bottom: 20px;
 }
 
+/* without this images will spill over into
+   team member name and github icon */
 #team .member .pic {
 	margin-bottom: 15px;
 	overflow: hidden;
-	height: 260px;
+	height: 300px;
 }
 
+/*changes overall size of team imgs.  anything
+  less than 85% the image sizes start fluctuating.*/
 #team .member .pic img {
 	max-width: 100%;
 }
 
+/*changes name size and weight*/
 #team .member h4 {
 	font-weight: 700;
 	margin-bottom: 2px;
 	font-size: 18px;
-}
-
-#team .member span {
-	font-style: italic;
-	display: block;
-	font-size: 13px;
-}
-
-#team .member .social {
-	margin-top: 15px;
-}
-
-#team .member .social a {
-	color: #b3b3b3;
-}
-
-#team .member .social a:hover {
-	color: #2dc997;
-}
-
-#team .member .social i {
-	font-size: 18px;
-	margin: 0 2px;
-}
-
-/* Contact Section
---------------------------------*/
-#contact {
-	background: #f7f7f7;
-	padding: 80px 0 40px 0;
-}
-
-#contact #google-map {
-	height: 300px;
-	margin-bottom: 20px;
-}
-
-#contact .info {
-	color: #333333;
-}
-
-#contact .info i {
-	font-size: 32px;
-	color: #2dc997;
-	float: left;
-	line-height: 0;
-}
-
-#contact .info p {
-	padding: 0 0 10px 50px;
-	margin-bottom: 20px;
-	line-height: 22px;
-	font-size: 14px;
-}
-
-#contact .info .email p {
-	padding-top: 5px;
-}
-
-#contact .social-links {
-	padding: 20px 0;
-}
-
-#contact .social-links a {
-	font-size: 18px;
-	background: #333;
-	color: #fff;
-	line-height: 1;
-	border-radius: 50%;
-	text-align: center;
-	width: 36px;
-	height: 36px;
-	transition: 0.3s;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#contact .social-links a i {
-	line-height: 0;
-}
-
-#contact .social-links a:hover {
-	background: #2dc997;
-	color: #fff;
-}
-
-#contact .php-email-form .error-message {
-	display: none;
-	color: #fff;
-	background: #ed3c0d;
-	text-align: left;
-	padding: 15px;
-	font-weight: 600;
-}
-
-#contact .php-email-form .error-message br + br {
-	margin-top: 25px;
-}
-
-#contact .php-email-form .sent-message {
-	display: none;
-	color: #fff;
-	background: #18d26e;
-	text-align: center;
-	padding: 15px;
-	font-weight: 600;
-}
-
-#contact .php-email-form .loading {
-	display: none;
-	background: #fff;
-	text-align: center;
-	padding: 15px;
-}
-
-#contact .php-email-form .loading:before {
-	content: "";
-	display: inline-block;
-	border-radius: 50%;
-	width: 24px;
-	height: 24px;
-	margin: 0 10px -6px 0;
-	border: 3px solid #18d26e;
-	border-top-color: #eee;
-	-webkit-animation: animate-loading 1s linear infinite;
-	animation: animate-loading 1s linear infinite;
-}
-
-#contact .php-email-form input,
-#contact .php-email-form textarea {
-	border-radius: 0;
-	box-shadow: none;
-	font-size: 14px;
-}
-
-#contact .php-email-form input::focus,
-#contact .php-email-form textarea::focus {
-	background-color: #2dc997;
-}
-
-#contact .php-email-form button[type="submit"] {
-	background: #2dc997;
-	border: 0;
-	padding: 10px 24px;
-	color: #fff;
-	transition: 0.4s;
-}
-
-#contact .php-email-form button[type="submit"]:hover {
-	background: #51d8ad;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1189,24 +689,26 @@ section {
 		transform: rotate(360deg);
 	}
 }
+/* END TEAM SECTION */
 
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
-#footer {
-	background: #343b40;
-	padding: 30px 0;
-	color: #fff;
-	font-size: 14px;
+
+
+
+.images {
+	border:2px solid black;
+	border-radius: 4px;
 }
 
-#footer .copyright {
-	text-align: center;
+.icon-box {
+	text-align: left;
+	margin: 2px 2px 2px 2px;
 }
 
-#footer .credits {
-	padding-top: 10px;
+#main h4 {
+	color: black;
+	font-size: 16px;
+	margin: 60px auto 20px auto;
 	text-align: center;
-	font-size: 13px;
-	color: #ccc;
+	text-decoration: underline;
+	width: 100%;
 }
